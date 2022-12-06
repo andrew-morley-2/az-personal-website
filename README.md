@@ -1,4 +1,4 @@
-# az-personal-website
+# About
 My own personal website - to allow others to learn more about me, my experience, and my projects.
 
 # Project Diagram
