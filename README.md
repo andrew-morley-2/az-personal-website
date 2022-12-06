@@ -3,7 +3,7 @@ My own personal website - to allow others to learn more about me, my experience,
 
 # Project Diagram
 
-<img src="https://i.imgur.com/DxZ4hX2.jpg" alt="Project Diagram">
+<img src="https://i.imgur.com/494gsTy.png" alt="Project Diagram">
 
 # First Steps
 
