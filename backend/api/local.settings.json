@@ -2,6 +2,7 @@
   "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzurePersonalWebsiteConnectionString": "AccountEndpoint=https://azurepersonalwebsite.documents.azure.com:443/;AccountKey=K4NuGo0okmVghKg6BVnMT4XCr9YGhy5LbTRYabdnyyjlJ1KE22Qv6uEvG3wGF15GSULSNxvdrpM2ACDbERjVzw==;"
   }
 }

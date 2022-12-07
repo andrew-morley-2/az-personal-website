@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Net.Http;
+
 
 namespace Company.Function
 {
@@ -15,21 +17,23 @@ namespace Company.Function
         [FunctionName("GetResumeCounter")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            [CosmosDB(databaseName:"AzurePersonalWebsite", collectionName: "Counter", ConnectionStringSetting = "AzureResumeConnectionString", Id = "1")] Counter counter,
+            [CosmosDB(databaseName:"AzurePersonalWebsite", collectionName: "Counter", ConnectionStringSetting = "AzureResumeConnectionString", Id = "1")] out Counter updatedCounter,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            updatedCounter = counter;
+            updatedCounter.Count += 1;
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            var jsonToReturn = JsonConvert.SerializeObject(counter);
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+            return new HttpResponseMessage(System.Net.HttpStatusCode.OK)
+            {
+                Content = new StringContent(jsonToReturn, Encoding.UTF8, "application/json")
+            }
 
-            return new OkObjectResult(responseMessage);
+
         }
     }
 }
