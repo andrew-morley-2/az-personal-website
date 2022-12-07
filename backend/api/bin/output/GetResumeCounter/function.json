@@ -1,5 +1,5 @@
 {
-  "generatedBy": "Microsoft.NET.Sdk.Functions-3.0.11",
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.1.1",
   "configurationSource": "attributes",
   "bindings": [
     {
@@ -13,6 +13,6 @@
     }
   ],
   "disabled": false,
-  "scriptFile": "../bin/backend 5.01.05 PM.dll",
+  "scriptFile": "../bin/api.dll",
   "entryPoint": "Company.Function.GetResumeCounter.Run"
 }
