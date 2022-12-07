@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andrewmorley/Projects/az-personal-website/backend/api/backend 5.01.05 PM.csproj": {}
+    "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\backend 5.01.05 PM.csproj": {}
   },
   "projects": {
-    "/Users/andrewmorley/Projects/az-personal-website/backend/api/backend 5.01.05 PM.csproj": {
+    "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\backend 5.01.05 PM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andrewmorley/Projects/az-personal-website/backend/api/backend 5.01.05 PM.csproj",
+        "projectUniqueName": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\backend 5.01.05 PM.csproj",
         "projectName": "backend 5.01.05 PM",
-        "projectPath": "/Users/andrewmorley/Projects/az-personal-website/backend/api/backend 5.01.05 PM.csproj",
-        "packagesPath": "/Users/andrewmorley/.nuget/packages/",
-        "outputPath": "/Users/andrewmorley/Projects/az-personal-website/backend/api/obj/",
+        "projectPath": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\backend 5.01.05 PM.csproj",
+        "packagesPath": "C:\\Users\\andrewmorley\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/andrewmorley/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\andrewmorley\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -78,6 +78,10 @@
             {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {
@@ -85,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
