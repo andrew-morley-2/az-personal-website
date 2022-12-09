@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\api.csproj": {}
+    "C:\\Users\\dmore\\Documents\\Projects\\az-personal-website\\backend\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\api.csproj": {
+    "C:\\Users\\dmore\\Documents\\Projects\\az-personal-website\\backend\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\dmore\\Documents\\Projects\\az-personal-website\\backend\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\andrewmorley\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andrewmorley\\Documents\\az-personal-website\\backend\\api\\obj\\",
+        "projectPath": "C:\\Users\\dmore\\Documents\\Projects\\az-personal-website\\backend\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\dmore\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dmore\\Documents\\Projects\\az-personal-website\\backend\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andrewmorley\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dmore\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -40,11 +40,15 @@
           "dependencies": {
             "Microsoft.Azure.WebJobs.Extensions.CosmosDB": {
               "target": "Package",
-              "version": "[4.0.0, )"
+              "version": "[3.0.10, )"
             },
             "Microsoft.NET.Sdk.Functions": {
               "target": "Package",
               "version": "[4.1.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0-preview-20221003-04, )"
             }
           },
           "imports": [
