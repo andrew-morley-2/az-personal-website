@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', (event) =>{
 });
 
 const localFunctionURL = 'http://localhost:7071/api/Counter';
-const functionApi = '';
+const functionApiUrl = 'https://visitorcounter1.azurewebsites.net/api/Counter?';
 
 const getVisitCount = () => {
 	let count = 30;
-	fetch(localFunctionURL).then(response => {
+	fetch(functionApiUrl).then(response => {
 			return response.json()
 	}).then(response =>{
 		console.log("Website called function API.");
