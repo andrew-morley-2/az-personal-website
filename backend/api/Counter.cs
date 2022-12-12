@@ -10,10 +10,10 @@ namespace Company.Function
     public static class Counter
     {
         [Function("Counter")]
-        [CosmosDBOutput("%DataBaseName%", "%CollectionName%", Connection = "CosmosDBConnectionString")]
+        [CosmosDBOutput("VisitorCounter", "Count", Connection = "CosmosDBConnectionString")]
 
         public static object Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req,
-        [CosmosDBInput("%DatabaseName%", "%CollectionName%", Connection = "CosmosDBConnectionString", Id ="1",PartitionKey ="1")] CounterJson counter,
+        [CosmosDBInput("VisitorCounter", "Count", Connection = "CosmosDBConnectionString", Id ="1",PartitionKey ="1")] CounterJson counter,
             FunctionContext executionContext)
         {
             counter.Count += 1;
