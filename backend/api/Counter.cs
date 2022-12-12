@@ -16,6 +16,7 @@ namespace Company.Function
         [CosmosDBInput("VisitorCounter", "Count", Connection = "CosmosDBConnectionString", Id ="1",PartitionKey ="1")] CounterJson counter,
             FunctionContext executionContext)
         {
+            // Here is where the counter gets updated.
             counter.Count += 1;
 
             return counter;
