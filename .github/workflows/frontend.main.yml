@@ -21,7 +21,6 @@ jobs:
       uses: azure/CLI@v1
       with:
         azcliversion: latest
-        creds: ${{ secrets.AZURE_STORAGE_KEY }}
         inlineScript: |
             az storage blob upload-batch --account-name azwebsitestorage --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
