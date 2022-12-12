@@ -1,14 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Xunit;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System.Net;
-using System.Net.Http;
-using System.Text;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
+using Microsoft.Extensions.Logging;
 
 namespace tests
 {
@@ -23,7 +18,7 @@ namespace tests
             counter.Id = "index";
             counter.Count = 2;
             var request = TestFactory.CreateHttpRequest();
-            var response = (HttpResponseMessage) Company.Function.GetResumeCounter.Run(request, counter, out counter, logger);
+            var response = (HttpResponseMessage) Company.Function.Counter.Run(request, counter, out counter);
             Assert.Equal(3, counter.Count);
         }
 
