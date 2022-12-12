@@ -22,13 +22,13 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-            az storage blob upload-batch --account-name azwebsitestorage --auth-mode key -d '$web' -s --overwrite frontend/
+            az storage blob upload-batch --account-name azwebsitestorage --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
         azcliversion: latest
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "az-website-cdn-am" --name "az-website-cdn-am" --resource-group "az-personal-website-rg"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "az-website-cdn-am" --name "az-website-cdn-am" --resource-group "DefaultResourceGroup-SCUS"
 
   # Azure logout
     - name: logout
