@@ -9,6 +9,7 @@ namespace tests
 {
     public class TestCounter
     {
+        
         public async void Http_trigger_should_return_known_string()
         {
             var counter = new Company.Function.Counter();
