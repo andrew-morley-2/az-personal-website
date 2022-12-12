@@ -9,16 +9,13 @@ namespace tests
 {
     public class TestCounter
     {
-        private readonly ILogger logger = TestFactory.CreateLogger();
-
-        [Fact]
         public async void Http_trigger_should_return_known_string()
         {
             var counter = new Company.Function.Counter();
             counter.Id = "index";
             counter.Count = 2;
             var request = TestFactory.CreateHttpRequest();
-            var response = (HttpResponseMessage) Company.Function.Counter.Run(request, counter, out counter);
+            var response = (HttpResponseMessage) Company.Function.Counter.Run(request, counter);
             Assert.Equal(3, counter.Count);
         }
 
