@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) =>{
 });
 
 const localFunctionURL = 'http://localhost:7071/api/Counter';
-const functionApiURL = 'https://visitcount.azurewebsites.net/api/Counter';
+const functionApiURL = 'https://visitcount.azurewebsites.net/api/Counter?';
 
 const getVisitCount = () => {
 	let count = 30;
