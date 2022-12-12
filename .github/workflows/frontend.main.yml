@@ -20,11 +20,13 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.0.72
         inlineScript: |
             az storage blob upload-batch --account-name <azwebsitestorage> --auth-mode key -d '$web' -s .
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.0.72
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "az-website-cdn-am" --name "az-website-cdn-am" --resource-group "az-personal-website-rg"
 
